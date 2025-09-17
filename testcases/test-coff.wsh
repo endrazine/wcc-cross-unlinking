@@ -1,0 +1,43 @@
+#!/usr/bin/wsh ./test_coff.so
+
+-- mind the different calling convention, we're adding arg4 + arg3:
+-- Microsoft x64 calling convention: args in RCX, RDX, R8, R9
+-- Linux amd64 calling convention: args in RDI, RSI, RDX, RCX, R8, R9
+
+-- add_numbers() test
+print(" [*] computing add_numbers(3,4)")
+
+res = add_numbers(0,0,3,4)
+print(res)
+
+if res == 7 then
+	print("PASS")
+else
+	print("FAIL")
+end
+
+-- multiply() test
+print(" [*] computing multiply(5,3)")
+
+res = multiply(0,0,5,3)
+print(res)
+
+if res == 15 then
+        print("PASS")
+else
+        print("FAIL")
+end
+
+-- fibionacci test
+print(" [*] computing fibionacci(8)");
+
+res = fibonacci(0,0,0,8)
+print(res)
+
+if res == 21 then
+        print("PASS")
+else
+        print("FAIL")
+end
+
+exit(0)

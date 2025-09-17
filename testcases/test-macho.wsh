@@ -1,0 +1,41 @@
+#!/usr/bin/wsh ./test_macho.so
+
+-- Calling convention similar to System V
+
+-- add_numbers() test
+print(" [*] computing add_numbers(3,4)")
+
+res = _add_numbers(3,4)
+print(res)
+
+if res == 7 then
+	print("PASS")
+else
+	print("FAIL")
+end
+
+-- multiply() test
+print(" [*] computing multiply(5,3)")
+
+res = _multiply(5,3)
+print(res)
+
+if res == 15 then
+        print("PASS")
+else
+        print("FAIL")
+end
+
+-- fibionacci test
+print(" [*] computing fibionacci(8)");
+
+res = _fibonacci(8)
+print(res)
+
+if res == 21 then
+        print("PASS")
+else
+        print("FAIL")
+end
+
+exit(0)
