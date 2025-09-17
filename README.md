@@ -87,8 +87,8 @@ The validation suite includes three mathematical functions across all formats:
 
 ```bash
 # Clone the repository
-git clone [repository-url]
-cd cross-unlinking
+git clone https://github.com/endrazine/wcc-cross-unlinking
+cd wcc-cross-unlinking
 
 # Build Docker environment
 make
